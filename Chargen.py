@@ -16,7 +16,7 @@ class Character:
         self.intemod=intemod
         self.wismod=wismod
         self.chamod=chamod
-        
+
     def RollScore(self):
         a=randint(1,6)
         b=randint(1,6)
@@ -42,7 +42,7 @@ class Character:
         print("f: ",f)
         list=[a,b,c,d,e,f]
         for i in range(len(self.Scorelist)):
-            print("Input letter for ", self.Scorelist.__getitem__(i), """
+            print("Input letter", self.Scorelist.__getitem__(i), """
 (1=Strength,2=Dexterity, 3=Constitution, 4=Intelligence, 5=Wisdom, 6=Charisma)""")
             x=input()
             if x=="a":
@@ -135,10 +135,10 @@ class End:
 
     def deleteindex(self, index, i, prevrace):
         return "Race does not exist. List to short"
-        
+
     def deletename(self, name, prevrace):
         return "Race does not exist"
-    
+
 class Race:
     def __init__(self, name, score1, score2, add1, add2, nextrace=End()):
         self.name=name
@@ -183,8 +183,8 @@ class Race:
                 return prevrace.name
         else:
             return self.nextrace.deletename(name, self)
-        
-        
+
+
 class Racelist:
     def __init__(self):
         self.nextrace=End()
@@ -208,8 +208,8 @@ class Racelist:
     def deletename(self,name):
         return self.nextrace.deletename(name, None)
 
-    
-    
+
+
 class Class:
     def __init__(self, name):
         self.name=name
@@ -228,4 +228,3 @@ if __name__ =="__main__":
     l.insert("Halfling","Cha","Wis",2,1)
     print(l.deleteindex(1))
     print(l.deletename("Elf"))
-    
