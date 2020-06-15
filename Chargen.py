@@ -42,7 +42,7 @@ class Character:
         print("f: ",f)
         list=[a,b,c,d,e,f]
         for i in range(len(self.Scorelist)):
-            print("Input letter", self.Scorelist.__getitem__(i), """
+            print("Input letter for", self.Scorelist.__getitem__(i), """
 (1=Strength,2=Dexterity, 3=Constitution, 4=Intelligence, 5=Wisdom, 6=Charisma)""")
             x=input()
             if x=="a":
